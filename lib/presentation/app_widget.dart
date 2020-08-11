@@ -19,16 +19,16 @@ class AppWidget extends StatelessWidget {
         title: 'Not Visiable',
         debugShowCheckedModeBanner: false,
         theme: ThemeData.light().copyWith(
-          primaryColor: const Color.fromRGBO(7, 29, 54, 1.0),
+          primaryColor: const Color(0xFF0F1C47),
           accentColor: Colors.blueAccent,
           appBarTheme: ThemeData.light().appBarTheme.copyWith(
                 brightness: Brightness.dark,
-                color: const Color.fromRGBO(7, 29, 54, 1.0),
+                color: const Color(0xFF0F1C47),
                 iconTheme: ThemeData.dark().iconTheme,
               ),
           inputDecorationTheme: InputDecorationTheme(
             border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(8),
+              borderRadius: BorderRadius.circular(20),
             ),
           ),
         ),

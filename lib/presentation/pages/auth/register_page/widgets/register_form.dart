@@ -10,12 +10,21 @@ class RegistrationForm extends StatelessWidget {
       child: ListView(
         padding: const EdgeInsets.all(8),
         children: [
-          const Text(
-            'logo',
-            textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 120),
+          const SizedBox(height: 20),
+          Center(
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(100),
+              child: const Image(
+                fit: BoxFit.cover,
+                height: 130,
+                width: 130,
+                image: AssetImage(
+                  "assets/logo/logo_place.jpg",
+                ),
+              ),
+            ),
           ),
-          const SizedBox(height: 8),
+          const SizedBox(height: 60),
           TextFormField(
             decoration: const InputDecoration(
               prefixIcon: Icon(Icons.person),
@@ -45,7 +54,7 @@ class RegistrationForm extends StatelessWidget {
             height: buttonHeight,
             child: RaisedButton(
               onPressed: () => {},
-              color: Colors.grey,
+              color: const Color(0xFF706B6B),
               child: const Text(
                 "Complete Registration",
                 style: TextStyle(
@@ -63,7 +72,7 @@ class RegistrationForm extends StatelessWidget {
               onPressed: () => {
                 Navigator.of(context).pushReplacementNamed(Routes.loginPage),
               },
-              color: Colors.grey,
+              color: const Color(0xFF706B6B),
               child: const Text(
                 "I have an account",
                 style: TextStyle(

@@ -3,6 +3,7 @@ import 'package:ddd_flutter_example/presentation/pages/auth/register_page/regist
 import 'package:ddd_flutter_example/presentation/pages/home/home_page.dart';
 import 'package:ddd_flutter_example/presentation/pages/splash/splash_page.dart';
 import 'package:ddd_flutter_example/presentation/routes/base_routes/error.dart';
+import 'package:ddd_flutter_example/presentation/routes/base_routes/transitions_builders.dart';
 import 'package:flutter/material.dart';
 
 abstract class Routes {
@@ -24,15 +25,28 @@ class RouteGenerator {
           settings: settings,
         );
       case Routes.loginPage:
-        return MaterialPageRoute(
-          builder: (_) => LoginPage(),
+        // return MaterialPageRoute(
+        //   builder: (_) => LoginPage(),
+        //   settings: settings,
+        // );
+
+        return PageRouteBuilder<dynamic>(
+          pageBuilder: (ctx, animation, secondaryAnimation) => LoginPage(),
           settings: settings,
+          transitionsBuilder: TransitionsBuilders.slideRight,
+          transitionDuration: const Duration(milliseconds: 400),
         );
 
       case Routes.registerPage:
-        return MaterialPageRoute(
-          builder: (_) => RegisterPage(),
+        // return MaterialPageRoute(
+        //   builder: (_) => RegisterPage(),
+        //   settings: settings,
+        // );
+        return PageRouteBuilder<dynamic>(
+          pageBuilder: (ctx, animation, secondaryAnimation) => RegisterPage(),
           settings: settings,
+          transitionsBuilder: TransitionsBuilders.slideLeft,
+          transitionDuration: const Duration(milliseconds: 400),
         );
 
       case Routes.homePage:

@@ -45,13 +45,26 @@ class SignInForm extends StatelessWidget {
           child: ListView(
             padding: const EdgeInsets.all(8.0),
             children: <Widget>[
-              const Text(
-                'M',
-                textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 120),
+              const SizedBox(height: 20),
+              Center(
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(100),
+                  child: const Image(
+                    fit: BoxFit.cover,
+                    height: 130,
+                    width: 130,
+                    image: AssetImage(
+                      "assets/logo/logo_place.jpg",
+                    ),
+                  ),
+                ),
               ),
-              const SizedBox(height: 8),
+              const SizedBox(height: 60),
               TextFormField(
+                style: const TextStyle(
+                  fontFamily: 'RobotoMono',
+                  fontWeight: FontWeight.w500,
+                ),
                 decoration: const InputDecoration(
                   prefixIcon: Icon(Icons.email),
                   labelText: 'Email',
@@ -75,6 +88,10 @@ class SignInForm extends StatelessWidget {
               ),
               const SizedBox(height: 8),
               TextFormField(
+                style: const TextStyle(
+                  fontFamily: 'RobotoMono',
+                  fontWeight: FontWeight.w500,
+                ),
                 // controller: passwordController,
                 decoration: const InputDecoration(
                   prefixIcon: Icon(Icons.lock),
@@ -100,13 +117,14 @@ class SignInForm extends StatelessWidget {
                 child: RaisedButton(
                   onPressed: () => context.bloc<SignInFormBloc>().add(
                       const SignInFormEvent.signInWithEmailPasswordPressed()),
-                  color: Colors.grey,
+                  color: const Color(0xFF706B6B),
                   child: const Text(
                     'Sign in',
                     style: TextStyle(
                       fontSize: 17,
                       color: Colors.white,
-                      fontWeight: FontWeight.normal,
+                      fontStyle: FontStyle.normal,
+                      fontFamily: 'RobotoMono',
                     ),
                   ),
                 ),
@@ -118,13 +136,13 @@ class SignInForm extends StatelessWidget {
                   onPressed: () => context
                       .bloc<SignInFormBloc>()
                       .add(const SignInFormEvent.signInWithGooglePressed()),
-                  color: Colors.grey,
+                  color: const Color(0xFF706B6B),
                   child: const Text(
                     'Sign in with Google',
                     style: TextStyle(
                       fontSize: 17,
                       color: Colors.white,
-                      fontWeight: FontWeight.normal,
+                      fontFamily: 'RobotoMono',
                     ),
                   ),
                 ),
@@ -137,13 +155,13 @@ class SignInForm extends StatelessWidget {
                     Navigator.of(context)
                         .pushReplacementNamed(Routes.registerPage),
                   },
-                  color: Colors.grey,
+                  color: const Color(0xFF706B6B),
                   child: const Text(
                     "Don't have an account ?",
                     style: TextStyle(
                       fontSize: 17,
                       color: Colors.white,
-                      fontWeight: FontWeight.normal,
+                      fontFamily: 'RobotoMono',
                     ),
                   ),
                 ),
