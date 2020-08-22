@@ -28,6 +28,7 @@ For example you are building a house but you don't have a blueprint you just sta
 * domain (its contains the business logic then the sub-folder cantains the feature specefic logic which make a clear goal what i am building ) 
 * infrastructure (its a similar of repository implementation the data source it can be replace by any data source there will be no effect of changing this app will be work fine)
 * presentation (it's contains UI related code)
+
 So it's possibale to develop a app without touching a ui code which can be develop later. Or if you work in team you can divide the work to different person once you have the domain. 
 
 
