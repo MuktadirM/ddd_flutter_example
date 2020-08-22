@@ -34,3 +34,7 @@ So it's possibale to develop a app without touching a ui code which can be devel
 
 ## Functional Programming 
 I have use some functional programming here, now let's talk about Either which have a left and right but what is it ? let's say i have a data type which have two sides left and right and can hold value of any types. it would be more nicer if one single variable can have error or correct value. it's like a warper class which can hold diffrent states combain with a data. in this case either plays a good role. for data validation or any succes or error case we can use Either to hold fail or success(data). You can check out (Java and kotlin where i have introduce this data type in my own way although java either have some less features but it useful)
+
+## Screenshots
+<img src="screenshots/Screenshot_1597183124.png" width="200" height = "400" >
+
