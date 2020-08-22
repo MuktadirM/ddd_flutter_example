@@ -23,7 +23,7 @@ Yes its possible to develop a software without using this pattern.
 ###### why its useful
 For example you are building a house but you don't have a blueprint you just start build the house suddenly you relised that it's not the things you want to develop. So what you have to do break the building an build it from scratch again. But what if you have a nice stucture you do something wrong you can break the wrong thing and build it from there again. Same goes in programming crate a blueprint and make seperation of code. It can be useable in any object oriented programming which i have shown in my repo (DDD example Kotlin and Java) Check that out
 
-### lets say i have four folder or package in lib at the top 
+### let's say i have four folder or package in lib at the top 
 * application (this foler cantains the appliaction logic which is handling different event from my presentation(UI) package or folder)
 * domain (its contains the business logic then the sub-folder cantains the feature specefic logic which make a clear goal what i am building ) 
 * infrastructure (its a similar of repository implementation the data source it can be replace by any data source there will be no effect of changing this app will be work fine)
@@ -31,4 +31,5 @@ For example you are building a house but you don't have a blueprint you just sta
 
 So it's possibale to develop a app without touching a ui code which can be develop later. Or if you work in team you can divide the work to different person once you have the domain. 
 
-
+## Functional Programming 
+I have use some functional programming here, now let's talk about Either which have a left and right but what is it ? let's say i have a data type which have two sides left and right and can hold value of any types. it would be more nicer if one single variable can have error or correct value. it's like a warper class which can hold diffrent states combain with a data. in this case either plays a good role. for data validation or any succes or error case we can use Either to hold fail or success(data). You can check out (Java and kotlin where i have introduce this data type in my own way although java either have some less features but it useful)
