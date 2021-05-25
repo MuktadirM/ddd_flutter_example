@@ -7,7 +7,7 @@
 This project is nothing than a simple login and home screen with a logout button. But it have a high level use of OOP. And have some funconal programming. It's have dependency injection , Software design pattern which you can use in our own project. Better error handling. Testable code and loosely coupled.
 You can see a [prototype](https://github.com/MuktadirM/ddd_flutter_example/blob/master/prototype/Prototype.xd) what i am building (Adobe XD CC file)
 
-### What have used here ?
+### What I have used here ?
 * Domain Driven Design
 * Functional programming (Dartz)
 * State management (Flutter Bloc)
